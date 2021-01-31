@@ -1,7 +1,6 @@
 -----------------------
--- Night Strategy
--- Run 03.10-19.00
--- 12.00-20.00
+-- Night Strategy || primedice.com
+-- Run 03.10-19.00 WIB
 -----------------------
 div       = 600000
 basebet   = balance/div
