@@ -57,7 +57,7 @@ if win then
     two = 0
     lol+= 1
     counter+= 1
-    wincount = 1
+    wincount+= 1
     nextbet = balance/div
     losecount=0    
 if (wincount==1) then
