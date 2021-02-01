@@ -1,6 +1,7 @@
 ------------------------
 -- Test 1 Doge
--- Bets>50.000 + balance
+-- Test 1 Hari + Balance
+-- Target 3 Hari
 ------------------------
 username  = "username"
 ------------------------
