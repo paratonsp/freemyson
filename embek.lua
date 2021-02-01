@@ -2,6 +2,8 @@
 -- Test 1 Doge
 -- Bets>50.000 + balance
 ------------------------
+username  = "username"
+------------------------
 div       = 600000
 basebet   = balance/div
 a         = basebet
@@ -690,10 +692,12 @@ if !win then
         end
     end
     profitn = profit/(balance-profit)*100
-    print("\nbalance: "..string.format("%.5f",balance))
+    print("\nuser: "..username)
+    print("balance: "..string.format("%.5f",balance))
     print("profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
     print("bets: "..bets.." || streak: "..currentstreak.."\n")
 end
+if (username=="username") then stop() print("ISIEN USERNAME COK") end
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
 lol = 0
