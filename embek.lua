@@ -16,7 +16,7 @@ losecount = 0
 betcount  = 0 
 counter   = 0 
 bethigh   = false
-maxbets   = 300000
+maxbets   = 999999999
 resetstats()
 chance = 90
 c1     = 0.09        
