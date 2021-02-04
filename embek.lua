@@ -51,6 +51,7 @@ if (wincount==25) then
 end
 betcount+=1
 if win then
+    if worststreak>4000 then stop() end
     two = 0
     lol+= 1
     counter+= 1
