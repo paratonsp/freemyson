@@ -1,7 +1,5 @@
 ------------------------
--- Test 1 Doge
--- Test 1 Hari + Balance
--- Target 3 Hari
+-- Play w/ 10 Doge
 ------------------------
 username  = "username"
 ------------------------
@@ -17,7 +15,6 @@ losecount = 0
 betcount  = 0 
 counter   = 0 
 bethigh   = false
-maxbets   = 999999999
 resetstats()
 chance = 90
 c1     = 0.09        
@@ -54,7 +51,6 @@ if (wincount==25) then
 end
 betcount+=1
 if win then
-    if (bets>maxbets) then stop() end
     two = 0
     lol+= 1
     counter+= 1
