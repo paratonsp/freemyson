@@ -84,7 +84,6 @@ print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 print("Balance: "..string.format("%.5f",balance).." "..currency)
 print("Profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
-print("Seed: "..nonce)
 print("Current Streak: "..currentstreak)
 print(" ")
 end
