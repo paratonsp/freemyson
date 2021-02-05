@@ -3,6 +3,7 @@ base = balance/div
 nextbet = base
 chance = 0.01
 multi = 1.0666666
+bethigh = true
 ----------------
 resetstats()
 function dobet()
@@ -10,6 +11,7 @@ base = balance/div
 if win then
 nextbet = base
 chance = 0.01
+bethigh = !bethigh
 else
 nextbet = previousbet*multi
  if (currentstreak==-1) then
@@ -78,8 +80,8 @@ nextbet = previousbet*multi
     chance=4.95 end
 end
 profitn = profit/(balance-profit)*100
-print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 print("balance: "..string.format("%.5f",balance))
 print("profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
 print("\n")
