@@ -1,6 +1,6 @@
 div = 1000000
 base = balance/div
-nextbase = base
+nextbet = base
 chance = 0.01
 multi = 1.0666666
 ----------------
