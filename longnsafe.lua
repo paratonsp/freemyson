@@ -82,7 +82,8 @@ end
 profitn = profit/(balance-profit)*100
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-print("balance: "..string.format("%.5f",balance))
-print("profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
-print("\n")
+print("Balance: "..string.format("%.5f",balance).." "..currency)
+print("Profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
+print("Seed: "..nonce)
+print(" ")
 end
