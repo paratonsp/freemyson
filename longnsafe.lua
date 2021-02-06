@@ -1,19 +1,20 @@
 username = "username"
 ----------------
 div = 1000000
+target = balance*1000
 base = balance/div
 nextbet = base
 chance = 0.01
 multi = 1.0666666
-bethigh = true
 ----------------
 resetstats()
 function dobet()
 base = balance/div
+if balance>target then
+stop() end
 if win then
 nextbet = base
 chance = 0.01
-bethigh = !bethigh
 else
 nextbet = previousbet*multi
  if (currentstreak==-1) then
@@ -81,6 +82,11 @@ nextbet = previousbet*multi
  if (currentstreak<=-31) then
     chance=4.95 end
 end
+if balance<nextbet then
+print("NOT ENOUGH BALANCE")
+stop()
+end
+------
 profitn = profit/(balance-profit)*100
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
