@@ -1,6 +1,6 @@
 
 div = 0.0000001
-adiv = 7.5
+adiv = 7.6
 target = balance*1000
 a = balance/adiv
 base = a*div
