@@ -219,7 +219,7 @@ if (currentstreak==-196) then nextbet=a*0.194328 end
 if (currentstreak==-197) then nextbet=a*0.207283 end
 if (currentstreak==-198) then nextbet=a*0.221102 end
 if (currentstreak==-199) then nextbet=a*0.235842 end
-if (currentstreak==-200) then stop(); print("STREAK 200"); end
+if (currentstreak<=-199) then nextbet=a*0.235842 end
 end
 if balance<nextbet then stop(); print("BALANCE NDAK CUKUP KO"); end
 if (username=="username") then stop() print("ISIEN USERNAME COK") end
