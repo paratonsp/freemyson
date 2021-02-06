@@ -1,6 +1,6 @@
 username = "username"
 ----------------
-div = 1000000
+div = 10000000
 target = balance*1000
 base = balance/div
 nextbet = base
