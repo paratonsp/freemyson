@@ -1,5 +1,4 @@
-username = "username"
----
+
 div = 0.0000001
 adiv = 7.5
 target = balance*1000
@@ -224,7 +223,6 @@ if (currentstreak==-199) then nextbet=a*0.0235842 end
 if (currentstreak<=-199) then nextbet=a*0.0235842 end
 end
 if balance<nextbet then stop(); print("BALANCE NDAK CUKUP KO"); end
-if (username=="username") then stop() print("ISIEN USERNAME COK") end
 profitn = profit/(balance-profit)*100
 print("\nUser : "..username)
 print("Balance : "..string.format("%.5f",balance).." "..currency)
