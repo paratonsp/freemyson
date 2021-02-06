@@ -224,7 +224,7 @@ if balance<nextbet then stop(); print("BALANCE NDAK CUKUP KO"); end
 if (username=="username") then stop() print("ISIEN USERNAME COK") end
 profitn = profit/(balance-profit)*100
 print("\nUser : "..username)
-print("Balance : "..string.format("%.5f",balance)..currency)
+print("Balance : "..string.format("%.5f",balance).." "..currency)
 print("Profit : "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
 print("Streak : "..currentstreak.."\n")
 end
