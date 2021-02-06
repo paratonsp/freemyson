@@ -6,6 +6,7 @@ base = balance/div
 nextbet = base
 chance = 0.01
 multi = 1.0666666
+bethigh = true
 ----------------
 resetstats()
 function dobet()
@@ -15,6 +16,7 @@ stop() end
 if win then
 nextbet = base
 chance = 0.01
+bethigh = !bethigh
 else
 nextbet = previousbet*multi
  if (currentstreak==-1) then
