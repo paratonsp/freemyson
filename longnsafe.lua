@@ -1,3 +1,5 @@
+username = "username"
+----------------
 div = 1000000
 base = balance/div
 nextbet = base
@@ -82,6 +84,8 @@ end
 profitn = profit/(balance-profit)*100
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+print("User: "..username)
 print("Balance: "..string.format("%.5f",balance).." "..currency)
 print("Profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
 print("Current Streak: "..currentstreak)
