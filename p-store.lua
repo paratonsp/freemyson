@@ -15,8 +15,6 @@ chance    = 91
 resetstats()
 function dobet()
 
-base = balance/div
-
 if wincount == 5 then
     bethigh=!bethigh
     wincount = 0
@@ -29,10 +27,11 @@ if currentprofit > 0 then
 end 
 
 if win then
-    nextbet = base
+    biv     = balance/div
+    nextbet = biv
     chance  = math.random(3000,8000)/100
     wincount+=1
-    p =0
+    p = 0
     l = 0
     a = 0
     losecount = 0
@@ -43,32 +42,32 @@ if win then
     if a == 4 then
         chance = 58.6
         po = 0.70477
-        nextbet = (l+base)/po
+        nextbet = (l+biv)/po
     end
     if a == 5 then
         chance = 59.6
         po = 0.6761
-        nextbet = (l+base)/po
+        nextbet = (l+biv)/po
     end
     if a == 6 then
         chance = 60.6
         po = 0.6485
-        nextbet = (l+base)/po
+        nextbet = (l+biv)/po
     end
     if a == 7 then
         chance = 61.8
         po = 0.6165
-        nextbet = (l+base)/po
+        nextbet = (l+biv)/po
     end
     if a == 8 then
         chance = 62.68 
         po = 0.593
-        nextbet = (l+base)/po
+        nextbet = (l+biv)/po
     end 
     if a == 9 then
         chance = 63.68
         po = 0.5687
-        nextbet = (l+base)/po
+        nextbet = (l+biv)/po
     end
     losecount+=1
 end
