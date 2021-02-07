@@ -1,4 +1,3 @@
-
 div = 0.0000001
 adiv = 40
 target = balance*1000
