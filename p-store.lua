@@ -10,7 +10,7 @@ a         = 0
 t         = 5
 po        = 1
 multi     = 1.17
-chance    = 91
+chance    = 98
 
 resetstats()
 function dobet()
@@ -37,8 +37,7 @@ if win then
     losecount = 0
  else
     a = math.random(4,9)
-    nextbet = l/po
-    
+    nextbet = l/po    
     if a == 4 then
         chance = 58.6
         po = 0.70477
