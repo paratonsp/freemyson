@@ -1,5 +1,3 @@
-username = "username"
----
 div = 0.0000001
 target = balance*1000
 base = balance*div
@@ -222,10 +220,6 @@ if (currentstreak==-199) then nextbet=a*0.0235842 end
 if (currentstreak<=-199) then nextbet=a*0.0235842 end
 end
 if balance<nextbet then stop(); print("BALANCE NDAK CUKUP KO"); end
-if (username=="username") then stop() print("ISIEN USERNAME COK") end
-profitn = profit/(balance-profit)*100
-print("\nUser : "..username)
-print("Balance : "..string.format("%.5f",balance).." "..currency)
-print("Profit : "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
-print("Streak : "..currentstreak.."\n")
+profitn=profit/(balance-profit)*100
+print("\nProfit: "..string.format("%.5f",profit).." "..currency.." ("..string.format("%.2f",profitn).."%)\n")
 end
