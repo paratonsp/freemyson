@@ -1,4 +1,5 @@
-adiv = 10   --Range 10-40
+-- nb: adiv=45-50, bigger=safer
+adiv = 50
 div = 0.000001
 a = balance/adiv
 base = a*div
@@ -215,7 +216,7 @@ if (currentstreak==-197) then nextbet=a*0.207283 end
 if (currentstreak==-198) then nextbet=a*0.221102 end
 if (currentstreak==-199) then nextbet=a*0.235842 end
 if (currentstreak==-200) then nextbet=a*0.235842 end
-if (currentstreak<=-200) then nextbet=a*0.235842; chance=98; resetseed(); end
+if (currentstreak<=-200) then nextbet=a*0.235842 end
 end
 ---
 profitn=profit/(balance-profit)*100
