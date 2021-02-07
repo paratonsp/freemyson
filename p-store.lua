@@ -15,6 +15,8 @@ chance    = 91
 resetstats()
 function dobet()
 
+base = balance/div
+
 if wincount == 5 then
     bethigh=!bethigh
     wincount = 0
@@ -27,7 +29,6 @@ if currentprofit > 0 then
 end 
 
 if win then
-    base    = balance/div
     nextbet = base
     chance  = math.random(3000,8000)/100
     wincount+=1
