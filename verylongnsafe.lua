@@ -1,23 +1,18 @@
+adiv = 10   --Range 10-40
 div = 0.000001
-adiv = 40
-target = balance*1000
 a = balance/adiv
 base = a*div
 nextbet = base
-chance = 95
-bethigh = true
+chance = 98
 resetstats()
+resetseed()
 ---
-
 function dobet()
-
-if balance>target then stop() end 
 if win then
 a = balance/adiv
 base = a*div
 nextbet = base
 chance = 0.01
-bethigh = !bethigh
 else
 if (currentstreak==-1) then nextbet=a*0.000001; chance=0.02; end
 if (currentstreak==-2) then nextbet=a*0.000001; chance=0.03; end
@@ -219,9 +214,9 @@ if (currentstreak==-196) then nextbet=a*0.194328 end
 if (currentstreak==-197) then nextbet=a*0.207283 end
 if (currentstreak==-198) then nextbet=a*0.221102 end
 if (currentstreak==-199) then nextbet=a*0.235842 end
-if (currentstreak<=-199) then nextbet=a*0.235842 end
+if (currentstreak<=-199) then nextbet=a*0.235842; chance=98; resetseed(); end
 end
-if balance<nextbet then stop(); print("BALANCE NOT ENOUGH"); end
+---
 profitn=profit/(balance-profit)*100
-print("\nProfit: "..string.format("%.5f",profit).." "..currency.." ("..string.format("%.2f",profitn).."%)\n")
+print("\n"..string.format("%.2f",balance).." "..currency.." || "..string.format("%.2f",profit).." "..currency.." ("..string.format("%.2f",profitn).."%)\n")
 end
