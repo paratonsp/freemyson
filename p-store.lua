@@ -39,32 +39,32 @@ if win then
  else
     a = math.random(4,9)
     nextbet = l/po    
-    if a == 4 then
+    if (a==4) then
         chance = 58.6
         po = 0.70477
         nextbet = (l+biv)/po
     end
-    if a == 5 then
+    if (a==5) then
         chance = 59.6
         po = 0.6761
         nextbet = (l+biv)/po
     end
-    if a == 6 then
+    if (a==6) then
         chance = 60.6
         po = 0.6485
         nextbet = (l+biv)/po
     end
-    if a == 7 then
+    if (a==7) then
         chance = 61.8
         po = 0.6165
         nextbet = (l+biv)/po
     end
-    if a == 8 then
+    if (a==8) then
         chance = 62.68 
         po = 0.593
         nextbet = (l+biv)/po
     end 
-    if a == 9 then
+    if (a==9) then
         chance = 63.68
         po = 0.5687
         nextbet = (l+biv)/po
