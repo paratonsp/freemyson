@@ -214,7 +214,8 @@ if (currentstreak==-196) then nextbet=a*0.194328 end
 if (currentstreak==-197) then nextbet=a*0.207283 end
 if (currentstreak==-198) then nextbet=a*0.221102 end
 if (currentstreak==-199) then nextbet=a*0.235842 end
-if (currentstreak<=-199) then nextbet=a*0.235842; chance=98; resetseed(); end
+if (currentstreak==-200) then nextbet=a*0.235842 end
+if (currentstreak<=-200) then nextbet=a*0.235842; chance=98; resetseed(); end
 end
 ---
 profitn=profit/(balance-profit)*100
