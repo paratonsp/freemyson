@@ -16,7 +16,6 @@ resetstats()
 function dobet()
 
 if wincount == 5 then
-    resetseed()  
     bethigh=!bethigh
     wincount = 0
 end
