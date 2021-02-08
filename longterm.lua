@@ -5,6 +5,7 @@ chance = 98
 bethigh=true
 bet=0
 resetstats()
+resetseed()
 --
 function dobet()
 bet+=1
