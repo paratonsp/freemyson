@@ -24,15 +24,12 @@ nextbet=base
 chance=0.01
 --
 else
-multi=1.035
+multi=1.04
 if nextbet>(base*10) then
-multi=1.0325
+multi=1.035
 end
 if nextbet>(base*100) then
 multi=1.03
-end
-if nextbet>(base*1000) then
-multi=1.0275
 end
 --
 if (currentstreak==-1) then nextbet=previousbet*multi; chance=0.09; end
