@@ -24,11 +24,8 @@ nextbet=base
 chance=0.01
 --
 else
-multi=1.04
-if nextbet>(base*10) then
-multi=1.035
-end
-if nextbet>(base*100) then
+multi=1.05
+if (currentstreak<=-25) then
 multi=1.03
 end
 --
