@@ -1,19 +1,25 @@
--- nb: adiv=45-50, bigger=safer
-adiv = 50
-div = 0.000001
-a = balance/adiv
-base = a*div
-nextbet = base
+-- nb: adiv=50-100, bigger=safer
+adiv=50
+nextbet=0.0
 chance = 98
+bethigh=true
+bet=0
 resetstats()
-resetseed()
----
+--
 function dobet()
+bet+=1
+if (bet==25000) then
+resetseed()
+bethigh=!bethigh
+bet=0
+end
+--
 if win then
-a = balance/adiv
-base = a*div
-nextbet = base
-chance = 0.01
+a=balance/adiv
+div=0.000001
+base=a*div
+nextbet=base
+chance=0.01
 else
 if (currentstreak==-1) then nextbet=a*0.000001; chance=0.02; end
 if (currentstreak==-2) then nextbet=a*0.000001; chance=0.03; end
@@ -215,10 +221,9 @@ if (currentstreak==-196) then nextbet=a*0.194328 end
 if (currentstreak==-197) then nextbet=a*0.207283 end
 if (currentstreak==-198) then nextbet=a*0.221102 end
 if (currentstreak==-199) then nextbet=a*0.235842 end
-if (currentstreak==-200) then nextbet=a*0.235842 end
-if (currentstreak<=-200) then nextbet=a*0.235842 end
+if (currentstreak<=-199) then nextbet=a*0.235842 end
 end
----
+--
 profitn=profit/(balance-profit)*100
 print("\n"..string.format("%.2f",balance).." "..currency.." || "..string.format("%.2f",profit).." "..currency.." ("..string.format("%.2f",profitn).."%)\n")
 end
