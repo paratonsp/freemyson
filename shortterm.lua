@@ -6,7 +6,6 @@ base = a*div
 nextbet = base
 chance = 98
 resetstats()
-resetseed()
 ---
 function dobet()
 if win then
@@ -216,7 +215,8 @@ if (currentstreak==-197) then nextbet=a*0.207283 end
 if (currentstreak==-198) then nextbet=a*0.221102 end
 if (currentstreak==-199) then nextbet=a*0.235842 end
 if (currentstreak==-200) then nextbet=a*0.235842 end
-if (currentstreak<=-200) then nextbet=a*0.000000; chance=98; resetseed(); end
+if (currentstreak<=-200) then nextbet=a*0.000000;
+   chance=98; end
 end
 ---
 profitn=profit/(balance-profit)*100
