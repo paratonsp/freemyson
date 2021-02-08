@@ -1,5 +1,5 @@
 --
-adiv=1.5
+adiv=9.9
 nextbet=0.0
 chance = 98
 bethigh=true
@@ -24,12 +24,15 @@ nextbet=base
 chance=0.01
 --
 else
-multi=1.05
+multi=1.035
 if nextbet>(base*10) then
-multi=1.0375
+multi=1.0325
 end
 if nextbet>(base*100) then
-multi=1.025
+multi=1.03
+end
+if nextbet>(base*1000) then
+multi=1.0275
 end
 --
 if (currentstreak==-1) then nextbet=previousbet*multi; chance=0.09; end
@@ -58,6 +61,7 @@ if (currentstreak==-23) then nextbet=previousbet*multi; chance=2.29; end
 if (currentstreak==-24) then nextbet=previousbet*multi; chance=2.39; end
 if (currentstreak==-25) then nextbet=previousbet*multi; chance=2.49; end
 if (currentstreak<=-25) then nextbet=previousbet*multi; chance=2.49; end
+if (currentstreak==-425) then stop(); print("MAX STREAK")end
 end
 --
 profitn=profit/(balance-profit)*100
