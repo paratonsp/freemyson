@@ -18,10 +18,9 @@ c16 = 3.3              -->30X payout
 c17 = 8.25              -->12X payout
 
 two       = 0
-bank      = balance*5
 div       = 6000000
 basebet   = balance/div
-a	      = basebet
+a	   = basebet
 nextbet   = basebet
 lol       = 0
 trigger   = 0
