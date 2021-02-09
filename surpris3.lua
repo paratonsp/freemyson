@@ -1,5 +1,5 @@
 --
-adiv=2.3
+adiv=0.12
 nextbet=0.0
 chance = 2.49
 bethigh=true
@@ -17,15 +17,15 @@ chance=2.49
 --
 else
 nextbet=0.0
-div=1000000
-a=div*adiv
-base=balance/a
 --
-if (currentstreak==-25) then
+if (currentstreak==-200) then
+      div=1000000
+      a=div*adiv
+      base=balance/a
       nextbet=base
       chance=2.49
     end
-if (currentstreak<=-26) then
+if (currentstreak<=-201) then
       nextbet=previousbet*1.03
       chance=2.49
     end
