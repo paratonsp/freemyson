@@ -54,5 +54,5 @@ if (currentstreak==-425) then stop(); print("MAX STREAK")end
 end
 --
 profitn=profit/(balance-profit)*100
-print("\n"..string.format("%.2f",balance).." "..currency.." || "..string.format("%.2f",profit).." "..currency.." ("..string.format("%.2f",profitn).."%)\n")
+print("\n"..string.format("%.2f",balance)..currency.."|"..string.format("%.2f",profit)..currency.." ("..string.format("%.2f",profitn).."%)\n")
 end
