@@ -11,6 +11,8 @@ nextbet=0.0
 if (currentstreak==-3) then
 nextbet=balance; bethigh=!bethigh; end end
 profitn=profit/(balance-profit)*100
-print("\n("..string.format("%.2f",profitn)
+print("\n"..string.format("%.2f",balance)
+..currency.."/"..string.format("%.2f",profit)
+..currency.."("..string.format("%.2f",profitn)
 .."%)\n")
 end
