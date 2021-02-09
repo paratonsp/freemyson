@@ -8,12 +8,12 @@ resetseed()
 function dobet()
 b+=1
 if (b>=60) then
+print(" ")
 resetseed()
 bethigh=!bethigh
 b=0
 end
 if win then
-resetbet()
 nextbet=0.0
 else
 nextbet=0.0
