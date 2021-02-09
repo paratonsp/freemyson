@@ -1,7 +1,7 @@
 --
-adiv=0.12
+sabar=110
 nextbet=0.0
-chance = 2.49
+chance = 98
 bethigh=true
 bet=0
 resetstats()
@@ -13,36 +13,31 @@ bet+=1
 if win then
 resetbet()
 nextbet=0.0
-chance=2.49
 --
 else
 nextbet=0.0
 --
-if (currentstreak==-200) then
-      div=1000000
-      a=div*adiv
-      base=balance/a
+if (currentstreak==-1) then
+      base=balance/sabar
       nextbet=base
-      chance=2.49
     end
-if (currentstreak<=-201) then
-      nextbet=previousbet*1.03
-      chance=2.49
+if (currentstreak==-2) then
+      nextbet=previousbet*100
     end
-end
+if (currentstreak<=-3) then
+      nextbet=0.0
+    end
 --
 profitn=profit/(balance-profit)*100
 print("\n"..string.format("%.2f",balance)..currency.."/"
       ..string.format("%.2f",profit)..currency..
       "("..string.format("%.2f",profitn).."%)\n")
---
 end
 function resetbet()
 if (bet==25000) then
 resetseed()
 bethigh=!bethigh
 bet=0
-end
 end
 --
 end
