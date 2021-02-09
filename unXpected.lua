@@ -20,18 +20,14 @@ chance=0.01
 --
 else
 previouschance=chance
-chance=previouschance+0.02
+chance=previouschance+0.01
 nextbet=previousbet
 --
-if (currentstreak<=-26) then
-      nextbet=previousbet*1.05
+if (currentstreak<=-25) then
+      nextbet=previousbet*1.06
       chance=2.49
     end
-if (currentstreak<=-51) then
-      nextbet=previousbet*1.04
-      chance=2.49
-    end
-if (currentstreak<=-76) then
+if (currentstreak<=-50) then
       nextbet=previousbet*1.03
       chance=2.49
     end
