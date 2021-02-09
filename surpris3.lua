@@ -1,22 +1,22 @@
+div=600000
+bet=25000
 nextbet=0.0
-chance = 98
+chance = 90
 bethigh=true
 b=0
 resetstats()
 resetseed()
 function dobet()
-b+=1
-if (b>=10) then
+b+=0
+if (b>=bet) then
 print(" ")
 resetseed()
 b=0
 end
 if win then
-nextbet=0.0
+nextbet=balance/div
 else
-nextbet=0.0
-if (currentstreak==-1) then
-nextbet=balance end
+nextbet=previousbet*12
 end
 profitn=profit/(balance-profit)*100
 print("\n"..string.format("%.2f",balance)
