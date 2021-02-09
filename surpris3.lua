@@ -7,10 +7,10 @@ resetstats()
 resetseed()
 function dobet()
 b+=1
-if (bet==60) then
+if (b>=60) then
 resetseed()
 bethigh=!bethigh
-bet=0
+b=0
 end
 if win then
 resetbet()
@@ -24,4 +24,4 @@ print("\n"..string.format("%.2f",balance)
 ..currency.."/"..string.format("%.2f",profit)
 ..currency.."("..string.format("%.2f",profitn)
 .."%)\n")
-end end
+end end end
