@@ -33,12 +33,11 @@ print("\n"..string.format("%.2f",balance)..currency.."/"
       ..string.format("%.2f",profit)..currency..
       "("..string.format("%.2f",profitn).."%)\n")
 end
+end
 function resetbet()
 if (bet==25000) then
 resetseed()
 bethigh=!bethigh
 bet=0
 end
-end
---
 end
