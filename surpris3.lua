@@ -39,5 +39,6 @@ resetseed()
 bethigh=!bethigh
 bet=0
 end
+end
 --
 end
