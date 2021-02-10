@@ -8,7 +8,9 @@ resetseed()
 --
 function dobet()
 --
+if (lastBet.nonce>=0) and (lastBet.nonce<=sseed) then
 worststreak()
+end
 --
 if win then
 if (lastBet.nonce>=sseed) then
