@@ -1,50 +1,45 @@
 --
-adiv=10
 nextbet=0.0
-chance = 98
-bethigh=true
-bet=0
+chance=98
 resetstats()
 resetseed()
 --
 function dobet()
-bet+=1
---
 if win then
-resetbet()
-div=1000000
-a=div*adiv
-base=balance/a
-nextbet=base
-chance=0.01
---
+    nextbet=0.0
+    print("SCANNING SEED!!! || Bets: "..bets)
 else
-previouschance=chance
-chance=previouschance+0.01
-nextbet=previousbet
+    nextbet=0.0
+    print("SCANNING SEED!!! || Bets: "..bets)
+end
 --
-if (currentstreak<=-25) then
-      nextbet=previousbet*1.06
-      chance=2.49
+if win and (bets>=25000) then
+    nextbet=0.0
+end
+--
+if !win and (bets>=25000) then
+-- WORSTSTREAK==-1
+if (worststreak==-1) then
+    if (currentstreak==-1) then
+    nextbet=balance/1
     end
-if (currentstreak<=-50) then
-      nextbet=previousbet*1.03
-      chance=2.49
+end
+-- WORSTSTREAK==-2
+if (worststreak==-2) then
+    if (currentstreak==-1) then
+    nextbet=balance/100
+    end
+    if (currentstreak==-2) then
+    nextbet=previousbet*99
     end
 end
---
-profitn=profit/(balance-profit)*100
-print("\n"..string.format("%.2f",balance)..currency.."/"
-      ..string.format("%.2f",profit)..currency..
-      "("..string.format("%.2f",profitn).."%)\n")
---
+-- WORSTSTREAK==-3
+if (worststreak==-3) then
+    stop()
+    print("NOT PROFITABLE")
 end
-function resetbet()
-if (bet==25000) then
-resetseed()
-bethigh=!bethigh
-bet=0
+print("\n"..string.format("%.2f",profit)..currency
+    .."("..string.format("%.2f",profitn).."%)\n")
 end
-end
---
+if (bets>=1000000) then stop() end
 end
