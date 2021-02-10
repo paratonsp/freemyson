@@ -1,12 +1,15 @@
 nextbet=0.0
 chance=98
-sseed=25000
+sseed=30000
 maxstreakloses=0
 streakloses=0
 resetstats()
 resetseed()
 --
 function dobet()
+--
+if (balance==0.0000000) then
+    stop() end
 --
 if (lastBet.nonce>0) and (lastBet.nonce<=sseed) then
 worststreak()
@@ -38,7 +41,7 @@ if (maxstreakloses==2) then
     print("\n"..string.format("%.2f",profit)..currency
     .."("..string.format("%.2f",profitn).."%)\n")
     elseif (currentstreak==-2) then
-    nextbet=previousbet*99
+    nextbet=balance/1
     print("\n"..string.format("%.2f",profit)..currency
     .."("..string.format("%.2f",profitn).."%)\n")
     end
