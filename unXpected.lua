@@ -8,7 +8,7 @@ resetseed()
 --
 function dobet()
 --
-if (lastBet.nonce>=0) and (lastBet.nonce<=sseed) then
+if (lastBet.nonce>0) and (lastBet.nonce<=sseed) then
 worststreak()
 end
 --
@@ -26,7 +26,7 @@ if (lastBet.nonce>=sseed) then
 -- WORSTSTREAK==1
 if (maxstreakloses==1) then
     if (currentstreak==-1) then
-    nextbet=balance/1.01
+    nextbet=balance/1
     print("\n"..string.format("%.2f",profit)..currency
     .."("..string.format("%.2f",profitn).."%)\n")
     end
@@ -48,6 +48,8 @@ else
 if (maxstreakloses==3) then
     resetstats()
     resetseed()
+    maxstreakloses=0
+    streakloses=0
 end
 nextbet=0.0
 print("SCANNING SEED || Nonce: "..lastBet.nonce)
@@ -56,17 +58,19 @@ end
 if (lastBet.nonce>=999999) then
     resetstats()
     resetseed()
+    maxstreakloses=0
+    streakloses=0
 end
 end
 --
 function worststreak()
-	if !win then
-		streakloses=streakloses+1
-		if maxstreakloses<=streakloses then
-			maxstreakloses=streakloses
-		end
-	else
-		streakloses=0
-	end
+  if !win then
+    streakloses=streakloses+1
+    if maxstreakloses<=streakloses then
+      maxstreakloses=streakloses
+    end
+  else
+    streakloses=0
+  end
 end
 --
