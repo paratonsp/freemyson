@@ -1,7 +1,7 @@
 --
 div       = 600000
 basebet   = balance/div
-a	      = basebet
+a	   = basebet
 nextbet   = basebet
 two       = 0
 lol       = 0
@@ -486,6 +486,9 @@ if !win then
         end
     end
 end
+profitn = profit/(balance-profit)*100
+print("\n User: "..lastBet.uid.."("..string.format("%.2f",profitn).."%)")
+print("Nonce: "..lastBet.nonce.." || Streak: "..currentstreak.."\n")
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
 lol = 0
