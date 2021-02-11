@@ -1,16 +1,16 @@
 --
-div       = 600000
-basebet   = balance/div
-a	   = basebet
-nextbet   = basebet
-two       = 0
-lol       = 0
-trigger   = 0
-wincount  = 0
-losecount = 0
-betcount  = 0 
-counter   = 0 
-bethigh   = false
+div=600000
+basebet=balance/div
+a=basebet
+nextbet=basebet
+two=0
+lol=0
+trigger=0
+wincount=0
+losecount=0
+betcount=0 
+counter=0 
+bethigh=false
 --
 chance=90
 c1=0.09
@@ -487,8 +487,8 @@ if !win then
     end
 end
 profitn = profit/(balance-profit)*100
-print("\nUser: "..lastBet.uid.."("..string.format("%.2f",profitn).."%)")
-print("Nonce: "..lastBet.nonce.." || Streak: "..currentstreak.."\n")
+print("\nNonce: "..lastBet.nonce.." || Streak: "..currentstreak)
+print("("..string.format("%.2f",profitn).."%)\n")
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
 lol = 0
