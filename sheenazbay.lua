@@ -487,7 +487,7 @@ if !win then
     end
 end
 profitn = profit/(balance-profit)*100
-print("\n("..string.format("%.2f",profitn).."%)")
+print("\n("..string.format("%.2f",profitn).."%) | Streak: "..currentstreak)
 print("Chance: "..lastBet.Chance.." | Nonce: "..lastBet.nonce.."\n")
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
