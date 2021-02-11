@@ -26,6 +26,7 @@ end
 --
 if !win then
 if (lastBet.nonce>=sseed) then
+profitn=profit/(balance-profit)*100
 -- WORSTSTREAK==1
 if (maxstreakloses==1) then
     if (currentstreak==-1) then
