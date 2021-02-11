@@ -3,6 +3,7 @@ chance=98
 sseed=30000
 maxstreakloses=0
 streakloses=0
+bethigh=true
 resetstats()
 resetseed()
 --
@@ -64,6 +65,7 @@ if (lastBet.nonce>=999999) then
     resetseed()
     maxstreakloses=0
     streakloses=0
+    bethigh=!bethigh
 end
 end
 --
