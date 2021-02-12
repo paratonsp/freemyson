@@ -27,5 +27,5 @@ cprof = cbal-sbal
 profn=cprof/(cbal-cprof)*100
 print("\nProfit: "..string.format("%.2f",cprof)..
 currency.." ("..string.format("%.2f",profn).."%)")
-print("Nonce: "..lasBet.nonce.."\n")
+print("Nonce: "..lastBet.nonce.."\n")
 end
