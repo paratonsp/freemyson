@@ -11,7 +11,7 @@ wincount=0
 losecount=0
 betcount=0 
 counter=0 
-bethigh=true
+bethigh=false
 --
 chance=90
 c1=0.09
