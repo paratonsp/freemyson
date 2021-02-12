@@ -2,7 +2,7 @@
 -- first 500 nonce, must be uptrend.
 -- if not, stop and start again.
 -----------------------------------------------
-div     = 50000
+div     = 200000
 chance  = 49.5
 basebet = balance/div
 nextbet = basebet
