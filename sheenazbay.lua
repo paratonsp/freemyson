@@ -1,16 +1,17 @@
 --
+username="username"
+--
 div=600000
 basebet=balance/div
 a=basebet
 nextbet=basebet
 two=0
-lol=0
 trigger=0
 wincount=0
 losecount=0
 betcount=0 
 counter=0 
-bethigh=false
+bethigh=true
 --
 chance=90
 c1=0.09
@@ -36,13 +37,12 @@ resetseed();
 function dobet()
 if (lastBet.nonce>=999999) then
     stop() end
-if (wincount==50) then
+if (wincount==20) then
 wincount=0
 end
 betcount+=1
 if win then 
-    two= 0
-    lol+= 1
+    two=0
     counter+=1
     wincount+=1
     basebet=balance/div
@@ -487,11 +487,10 @@ if !win then
     end
 end
 profitn = profit/(balance-profit)*100
-print("\n("..string.format("%.2f",profitn).."%) | Streak: "..currentstreak)
-print("Chance: "..lastBet.Chance.." | Nonce: "..lastBet.nonce.."\n")
-if (lol==1) then
-if (bethigh==true) then bethigh=false else bethigh=true end
-lol = 0
-end
+print("\nUser: "..username)
+print("Balance: "..string.format("%.2f",balance).." "..currency)
+print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
+print("Nonce: "..lastBet.nonce)
+print("Chance: "..lastBet.Chance.." | Streak: "..currentstreak)
 end
 end
