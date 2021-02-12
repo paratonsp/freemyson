@@ -490,7 +490,7 @@ profitn = profit/(balance-profit)*100
 print("\nUser: "..username)
 print("Balance: "..string.format("%.2f",balance).." "..currency)
 print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
-print("Nonce: "..lastBet.nonce)
+print("Nonce: "..lastBet.nonce.." | Wins: "..wins)
 print("Chance: "..lastBet.Chance.." | Streak: "..currentstreak)
 end
 end
