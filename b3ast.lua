@@ -52,11 +52,12 @@ wincount = 0
 end
 --
 betcount+=1
-    two=0
-    counter+=1
-    wincount+=1
-    nextbet=basebet
-    losecount=0
+if win then 
+two=0
+counter+=1
+wincount+=1
+nextbet=basebet
+losecount=0
 --  
 if (wincount==1) then
     trigger=1
