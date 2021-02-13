@@ -11,7 +11,6 @@ losecount = 0
 betcount  = 0
 counter   = 0
 bethigh   = false
-bet       = 0
 --
 resetstats()
 resetseed()
@@ -43,6 +42,7 @@ c24    = 2.39
 c25    = 2.49
 --
 function dobet()
+--
 basebet=balance/div
 a=basebet
 --
@@ -691,7 +691,7 @@ if !win then
     profitn = profit/(balance-profit)*100
     print("\nBalance: "..string.format("%.2f",balance))
     print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
-    print("Streak: "..currentstreak.."\n")
+    print("Chance: "..lastBet.chance.." || Streak: "..currentstreak.."\n")
 end
 if nextbet>balance then stop() end
 end
