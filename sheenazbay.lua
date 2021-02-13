@@ -35,11 +35,11 @@ resetstats()
 resetseed();
        
 function dobet()
-if (lastBet.nonce>=999999) then
-    stop() end
 if (wincount==20) then
+resetseed()
 wincount=0
 end
+if nextbet>balance then stop() end
 betcount+=1
 if win then 
     two=0
