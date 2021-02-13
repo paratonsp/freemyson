@@ -1,21 +1,17 @@
-------------------------
--- Play w/ 10 Doge
-------------------------
-username  = "username"
-------------------------
 div       = 600000
 basebet   = balance/div
 a         = basebet
 nextbet   = basebet
 two       = 0
-lol       = 0
 trigger   = 0
 wincount  = 0
 losecount = 0
 betcount  = 0 
 counter   = 0 
 bethigh   = false
+--
 resetstats()
+resetseed()
 chance = 90
 c1     = 0.09        
 c2     = 0.19      
@@ -42,22 +38,23 @@ c22    = 2.19
 c23    = 2.29
 c24    = 2.39
 c25    = 2.49
+--
 function dobet()
-basebet   = balance/div
-a         = basebet
+--
 if (wincount==25) then
     resetseed()
     wincount = 0
 end
 betcount+=1
 if win then
-    if worststreak>4000 then stop() end
-    two = 0
-    lol+= 1
-    counter+= 1
-    wincount+= 1
-    nextbet = balance/div
-    losecount=0    
+    basebet=balance/div
+    a=basebet
+    two=0
+    counter+=1
+    wincount+=1
+    nextbet=balance/div
+    losecount=0  
+--
 if (wincount==1) then
     trigger=1
 end
@@ -690,15 +687,11 @@ if !win then
         end
     end
     profitn = profit/(balance-profit)*100
-    print("\nuser: "..username)
-    print("balance: "..string.format("%.5f",balance))
+    print("\nbalance: "..string.format("%.5f",balance))
     print("profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
     print("bets: "..bets.." || streak: "..currentstreak.."\n")
 end
-if (username=="username") then stop() print("ISIEN USERNAME COK") end
-if (lol==1) then
-if (bethigh==true) then bethigh=false else bethigh=true end
-lol = 0
+if nextbet>balance then stop() end
 end
 end
 end
