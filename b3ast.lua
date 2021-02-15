@@ -47,6 +47,10 @@ function dobet()
 basebet=balance/div
 a=basebet
 --
+if (bets>=300000) then
+stop()
+end
+--
 if (wincount==25) then
 resetseed()
 wincount = 0
