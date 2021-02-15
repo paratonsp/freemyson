@@ -5,6 +5,7 @@ a         = basebet
 nextbet   = basebet
 --
 two       = 0
+lol       = 0
 trigger   = 0
 wincount  = 0
 losecount = 0
@@ -54,6 +55,7 @@ end
 betcount+=1
 if win then 
 two=0
+lol+=1
 counter+=1
 wincount+=1
 nextbet=basebet
@@ -694,6 +696,10 @@ if !win then
     print("Chance: "..lastBet.chance.." || Streak: "..currentstreak.."\n")
 end
 if nextbet>balance then stop() end
+if (lol==1) then
+if (bethigh==true) then bethigh=false else bethigh=true end
+lol = 0
+end
 end
 end
 end
