@@ -3,7 +3,7 @@ stopnow = false
 first = true
 done = true
 chance = 27.5
-betcalc = 0.01023403
+betcalc = 0.00274702
 gan = 100000
 base = balance * (betcalc / gan)
 curbet = base * 3.7255
@@ -34,7 +34,7 @@ function dobet()
         first = true
         done = true
         chance = 27.5
-        betcalc = 0.01023403
+        betcalc = 0.00274702
         gan = 100000
         base = balance * (betcalc / gan)
         curbet = base * 3.7255
@@ -52,7 +52,7 @@ function dobet()
         first = true
         done = true
         chance = 27.5
-        betcalc = 0.01023403
+        betcalc = 0.00274702
         gan = 100000
         base = balance * (betcalc / gan)
         curbet = base * 3.7255
