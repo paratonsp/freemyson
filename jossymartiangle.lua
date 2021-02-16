@@ -1,25 +1,25 @@
-
--- 7 max losses (ludicrous) - 27.364138
--- 8 max losses (stupid) - 7.3446286
--- 9 max losses (risky) - 1.9714477
--- 10 max losses (safe) - 0.5291766
--- 11 max losses (safest) - 0.1420417
--- 12 max losses (ultra-safe) - 0.03812690
--- 13 max losses (super-ultra-safe) - 0.01023403
--- 14 max losses (mega-super-ultra-safe) - 0.00274702
-
-
-betcalc = 0
+-------------------------------------------
+-- 7 max losses (for 6 losestreak) - 27.364138
+-- 8 max losses (for 7 losestreak) - 7.3446286
+-- 9 max losses (for 8 losestreak) - 1.9714477
+-- 10 max losses (for 9 losestreak) - 0.5291766
+-- 11 max losses (for 10 losestreak) - 0.1420417
+-- 12 max losses (for 11 losestreak) - 0.03812690
+-- 13 max losses (for 12 losestreak) - 0.01023403
+-----------
+betcalc = 0.01023403
 -------------------------------------------
 bethigh = true
 stopnow = false
 first = true
 done = true
 chance = 27.5
-base = balance * (betcalc / 100000)
+gan = 100000
+base = balance * (betcalc / gan)
 curbet = base * 3.7255
 nextbet = base
-maxbets=200000
+maxbets=50000
+resetseed()
 
 function dobet()
   
@@ -30,7 +30,7 @@ function dobet()
   if (lastBet.nonce>=maxbets) then
     stop() end
 
-  base = balance * (betcalc / 100000)
+  base = balance * (betcalc / gan)
 
   if (first) then
     if(stopnow) then stop() end
