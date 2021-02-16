@@ -1,4 +1,4 @@
--- after 50k bets/nonce, remove resetseed()
+-- after 50k bets/nonce, remove resetseed() & resetstats()
 -- and change maxbets to 200k
 -------------------------------------------
 -- 7 max losses (for 6 losestreak) - 27.364138
@@ -23,6 +23,7 @@ curbet = base * 3.7255
 nextbet = base
 maxbets = 50000     --maxbets is here
 resetseed()         --resetseed() is here
+resetstats()        --resetstats() is here
 
 function dobet()
   
