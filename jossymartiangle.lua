@@ -1,4 +1,5 @@
 -- after 50k bets/nonce, remove resetseed()
+-- and change maxbets to 200k
 -------------------------------------------
 -- 7 max losses (for 6 losestreak) - 27.364138
 -- 8 max losses (for 7 losestreak) - 7.3446286
@@ -20,9 +21,8 @@ gan = 100000
 base = balance * (betcalc / gan)
 curbet = base * 3.7255
 nextbet = base
-maxbets=50000
-resetseed()
---resetseed() is here
+maxbets = 50000     --maxbets is here
+resetseed()         --resetseed() is here
 
 function dobet()
   
