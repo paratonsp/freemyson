@@ -24,7 +24,7 @@ function dobet()
 
   base = balance * (betcalc / 100000)
 
-  if (lastBet.nonce>=200000) then
+  if (lastBet.nonce>=50000) then
     resetseed()
     resetstats()
   end
