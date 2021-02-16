@@ -6,6 +6,8 @@
 -- 11 max losses (safest) - 0.1420417
 -- 12 max losses (ultra-safe) - 0.03812690
 -- 13 max losses (super-ultra-safe) - 0.01023403
+-- 14 max losses (mega-super-ultra-safe) - 0.00274702
+
 
 betcalc = 0
 -------------------------------------------
@@ -17,21 +19,18 @@ chance = 27.5
 base = balance * (betcalc / 100000)
 curbet = base * 3.7255
 nextbet = base
-resetseed()
-resetstats()
+maxbets=200000
 
 function dobet()
-
-  base = balance * (betcalc / 100000)
-
-  if (lastBet.nonce>=50000) then
-    resetseed()
-    resetstats()
-  end
-
+  
   if (betcalc < 0.01) then
     print("Please set betcalc then restart the script")
     stop() end
+  
+  if (lastBet.nonce>=maxbets) then
+    stop() end
+
+  base = balance * (betcalc / 100000)
 
   if (first) then
     if(stopnow) then stop() end
