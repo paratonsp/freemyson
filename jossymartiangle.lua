@@ -1,3 +1,4 @@
+-- after 50k bets/nonce, remove resetseed()
 -------------------------------------------
 -- 7 max losses (for 6 losestreak) - 27.364138
 -- 8 max losses (for 7 losestreak) - 7.3446286
@@ -6,8 +7,9 @@
 -- 11 max losses (for 10 losestreak) - 0.1420417
 -- 12 max losses (for 11 losestreak) - 0.03812690
 -- 13 max losses (for 12 losestreak) - 0.01023403
+-- 14 max losses (for 13 losestreak) - 0.00274702
 -----------
-betcalc = 0.01023403
+betcalc = 0.00274702
 -------------------------------------------
 bethigh = true
 stopnow = false
@@ -20,10 +22,11 @@ curbet = base * 3.7255
 nextbet = base
 maxbets=50000
 resetseed()
+--resetseed() is here
 
 function dobet()
   
-  if (betcalc < 0.01) then
+  if (betcalc < 0.002) then
     print("Please set betcalc then restart the script")
     stop() end
   
