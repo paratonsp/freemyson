@@ -46,7 +46,7 @@ function dobet()
       end
     end
   --    
-  if (lastBet.nonce>=200000) then
+  if win and (lastBet.nonce>=200000) then
         bethigh = true
         stopnow = false
         first = true
@@ -90,6 +90,8 @@ function dobet()
     end
   end
   done = false
+  print(string.format("%.1f",balance)
+  .." "..currency)
 end
 --
 function worststreak()
