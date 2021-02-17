@@ -34,6 +34,7 @@ function dobet()
   end 
   if betcount == 1 then
     betcount=0
+    resetseed()
   else
     betcount=betcount+1
   end
