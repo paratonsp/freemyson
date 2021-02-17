@@ -21,6 +21,10 @@ nextbet = base
 
 function dobet()
   
+  if (betcalc < 0.001) then
+    print("Please set betcalc then restart the script")
+    stop() end
+  
   if (betcalc < 0.00000001) then
     print("Please set betcalc then restart the script")
     stop() end
