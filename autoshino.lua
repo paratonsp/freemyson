@@ -16,7 +16,7 @@ nextbet = base
 function dobet()
 
   if (balance>target) then
-     --withdraw(simpan,dompet)
+     withdraw(simpan,dompet)
   end
   --
   if (betcalc < 0.00000001) then
