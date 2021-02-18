@@ -1,4 +1,4 @@
-dompet = xxxx
+dompet = "DFnVezCcWYHsrju7gCrcw4gMSSPKch3sN8"
 simpan = 1000
 target = 1100
 --
