@@ -32,7 +32,7 @@ print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
 betcount+=1
 if win then
 --
-if (lastBet.nonce>=100) then
+if (lastBet.nonce>=1000) then
 resetseed() end
 --
 two=0
