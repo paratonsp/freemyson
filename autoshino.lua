@@ -66,4 +66,6 @@ function dobet()
     end
   end
   done = false
+  print("Balance: "..balance.." "..string.upper(currency))
+  print("ID: "..lastBet.id)
 end
