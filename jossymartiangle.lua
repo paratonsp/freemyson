@@ -7,9 +7,9 @@
 -- 13 max losses (for 12 losestreak) -> 0.01023403
 -- 14 max losses (for 13 losestreak) -> 0.00274702
 --------------------------------------------------
-betcalc = 0.00274702
+betcalc = 0.5291766
 --------------------------------------------------
-bethigh = true
+bethigh = false
 stopnow = false
 first = true
 done = true
@@ -18,16 +18,18 @@ gan = 100000
 base = balance * (betcalc / gan)
 curbet = base * 3.7255
 nextbet = base
-
+resetseed()
+resetstats()
+--
 function dobet()
-  
-  if (betcalc < 0.00000001) then
+--  
+  if (betcalc<0.00000001) then
     print("Please set betcalc then restart the script")
     stop() end
 
   if (nextbet>balance) then stop() end
   base = balance * (betcalc / gan)
-
+  --
   if (first) then
     if(stopnow) then stop() end
     if !win then
@@ -37,7 +39,7 @@ function dobet()
       done = true
     end
   end
-
+  --
   if(!first and !done) then
     if(stopnow) then stop() end
     if win then
@@ -56,6 +58,6 @@ function dobet()
   end
   done = false
   profitn = profit/(balance-profit)*100
-  print("Balance: "..string.format("%.5f",balance)
-  .." "..currency)
+  print("\nBalance: "..string.format("%.8f",balance)
+  .." "..string.format(currency))
 end
