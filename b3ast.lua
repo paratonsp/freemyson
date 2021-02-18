@@ -1,5 +1,5 @@
 --
-div    = 600000
+div=600000
 basebet=balance/div
 a=basebet
 nextbet=basebet
