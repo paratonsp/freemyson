@@ -15,8 +15,8 @@ first = true
 done = true
 chance = 27.5
 gan = 100000
-base = balance * (betcalc / gan)
-curbet = base * 3.7255
+base = balance*(betcalc/gan)
+curbet = base*3.7255
 nextbet = base
 resetseed()
 resetstats()
@@ -28,12 +28,13 @@ function dobet()
     stop() end
 
   if (nextbet>balance) then stop() end
-  base = balance * (betcalc / gan)
+  base = balance*(betcalc/gan)
   --
   if (first) then
     if(stopnow) then stop() end
     if !win then
-      chance = math.random(5000,5500)/100
+      chance = math.random(4750,5000)/100
+      curbet = base*3.7255
       nextbet = curbet
       first = false
       done = true
@@ -44,16 +45,16 @@ function dobet()
     if(stopnow) then stop() end
     if win then
       if (lastBet.nonce>=1000) then resetseed() end
-      chance = math.random(2750,3250)/100
-      curbet = base * 3.7255
+      chance = math.random(2500,2750)/100
+      curbet = base*3.7255
       nextbet = base
       bethigh = !bethigh
       first = true
       done = true
     else
-      curbet = curbet * 3.7255
+      curbet = curbet*3.7255
       nextbet = curbet
-      chance = math.random(7250,7750)/100
+      chance = math.random(7000,7250)/100
     end
   end
   done = false
