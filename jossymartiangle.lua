@@ -21,20 +21,17 @@ nextbet = base
 
 function dobet()
   
-  if (betcalc < 0.001) then
-    print("Please set betcalc then restart the script")
-    stop() end
-  
   if (betcalc < 0.00000001) then
     print("Please set betcalc then restart the script")
     stop() end
 
+  if (nextbet>balance) then stop() end
   base = balance * (betcalc / gan)
 
   if (first) then
     if(stopnow) then stop() end
     if !win then
-      chance = 50
+      chance = math.random(5000,5250)/100
       nextbet = curbet
       first = false
       done = true
@@ -44,15 +41,16 @@ function dobet()
   if(!first and !done) then
     if(stopnow) then stop() end
     if win then
-      chance = 27.5
+      chance = math.random(2750,3000)/100
       curbet = base * 3.7255
       nextbet = base
+      bethigh = !bethigh
       first = true
       done = true
     else
       curbet = curbet * 3.7255
       nextbet = curbet
-      chance = 72.5
+      chance = math.random(7250,7500)/100
     end
   end
   done = false
