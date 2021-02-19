@@ -1,8 +1,4 @@
-dompet = "DFnVezCcWYHsrju7gCrcw4gMSSPKch3sN8"
-simpan = 500
-target = 550
---
-div     = 600000
+div     = 1500000
 basebet = balance/div
 a       = basebet
 nextbet = basebet
@@ -19,9 +15,6 @@ resetseed()
 chance = 90
 --
 function dobet()
---
-if (balance>target) then
-withdraw(simpan,dompet) end
 --
 if nextbet>balance then stop() end
 profitn = profit/(balance-profit)*100
@@ -92,7 +85,7 @@ if !win then
     end
     if !win and nextbet > (a*10) then
       chance  = math.random(1900,2000)/100
-      nextbet = previousbet*1.325
+      nextbet = previousbet*1.250
     end
   end
   if lostchance==3 then
@@ -106,7 +99,7 @@ if !win then
     end
     if !win and nextbet > (a*10) then
       chance  = math.random(2900,3000)/100
-      nextbet = previousbet*1.525
+      nextbet = previousbet*1.375
     end
   end
   if lostchance==4 then
@@ -120,7 +113,7 @@ if !win then
     end
     if !win and nextbet > (a*10) then
       chance  = math.random(3900,4000)/100
-      nextbet = previousbet*1.725
+      nextbet = previousbet*1.5
     end
   end
   if lostchance==5 then
