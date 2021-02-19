@@ -62,7 +62,7 @@ function dobet()
       first   = true
       done    = true
     else
-      chance  = math.random(7250,7300)/100
+      chance  = math.random(7250,7375)/100
       curbet  = curbet*3.7255
       nextbet = curbet
     end
