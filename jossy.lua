@@ -44,7 +44,7 @@ function dobet()
     if(stopnow) then stop() end
     if win then
       if (lastBet.nonce>=1000) then resetseed() end
-      chance = math.random(2000,2500)/100
+      chance = math.random(2500,2750)/100
       curbet = base*3.7255
       nextbet = base
       bethigh = !bethigh
