@@ -47,7 +47,6 @@ function dobet()
     if(stopnow) then stop() end
     if !win then
       chance  = math.random(5000,5250)/100
-      curbet = base*3.7255
       nextbet = curbet
       first   = false
       done    = true
