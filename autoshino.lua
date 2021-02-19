@@ -1,6 +1,6 @@
 dompet = "DFnVezCcWYHsrju7gCrcw4gMSSPKch3sN8"
-simpan = 100
-target = 200
+simpan = balance
+target = balance*2
 --
 betcalc = 0.5291766
 bethigh = true
