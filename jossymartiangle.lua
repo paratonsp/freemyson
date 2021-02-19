@@ -9,10 +9,6 @@
 --------------------------------------------------
 betcalc = 0.5291766
 --------------------------------------------------
-dompet = "DFnVezCcWYHsrju7gCrcw4gMSSPKch3sN8"
-simpan = 500
-target = 550
---------------------------------------------------
 bethigh = false
 stopnow = false
 first = true
@@ -27,10 +23,6 @@ resetstats()
 --
 function dobet()
 --
-  if (balance>target) then
-     withdraw(simpan,dompet)
-  end
-  --
   if (betcalc<0.00000001) then
     print("Please set betcalc then restart the script")
     stop() end
@@ -41,7 +33,7 @@ function dobet()
   if (first) then
     if(stopnow) then stop() end
     if !win then
-      chance = math.random(4750,5000)/100
+      chance = math.random(5000,5250)/100
       curbet = base*3.7255
       nextbet = curbet
       first = false
@@ -53,7 +45,7 @@ function dobet()
     if(stopnow) then stop() end
     if win then
       if (lastBet.nonce>=1000) then resetseed() end
-      chance = math.random(2500,2750)/100
+      chance = math.random(2000,2500)/100
       curbet = base*3.7255
       nextbet = base
       bethigh = !bethigh
@@ -62,7 +54,7 @@ function dobet()
     else
       curbet = curbet*3.7255
       nextbet = curbet
-      chance = math.random(7250,7350)/100
+      chance = math.random(7250,7375)/100
     end
   end
   done = false
