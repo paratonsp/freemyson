@@ -9,6 +9,10 @@
 --------------------------------------------------
 betcalc = 0.5291766
 --------------------------------------------------
+dompet = "DFnVezCcWYHsrju7gCrcw4gMSSPKch3sN8"
+simpan = 500
+target = 550
+--------------------------------------------------
 bethigh = false
 stopnow = false
 first = true
@@ -22,11 +26,15 @@ resetseed()
 resetstats()
 --
 function dobet()
---  
+--
+  if (balance>target) then
+     withdraw(simpan,dompet)
+  end
+  --
   if (betcalc<0.00000001) then
     print("Please set betcalc then restart the script")
     stop() end
-
+  --
   if (nextbet>balance) then stop() end
   base = balance*(betcalc/gan)
   --
@@ -60,5 +68,5 @@ function dobet()
   done = false
   profitn = profit/(balance-profit)*100
   print("\nBalance: "..string.format("%.8f",balance)
-  .." "..string.format(currency))
+  .." "..string.upper(currency))
 end
