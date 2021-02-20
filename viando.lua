@@ -6,7 +6,7 @@ simpan = balance-(target-mtarget)
 --
 nextbet  = balance/gan
 chance   = 65   --chance
-if_win   = 1.16 --if win
+if_win   = 1.22 --if win
 if_lose  = 1.40 --if lose
 streak   = 3    --streak
 bethigh  = false
@@ -44,7 +44,7 @@ if !win then
     nextbet = previousbet*if_lose
 end
 profitn=profit/(balance-profit)*100
-print("\n"..string.format("%.8f",profit)
+print("\n"..string.format("%.8f",balance)
 .." "..string.upper(currency).." ("
 ..string.format("%.2f",profitn).."%)")
 end
