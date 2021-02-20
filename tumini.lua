@@ -31,7 +31,6 @@ else
 end
 if pf > pr then
     pr = pf
-    bb = balance/gan
     nb = bb
 end
 nextbet = nb
