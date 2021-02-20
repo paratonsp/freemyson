@@ -1,6 +1,6 @@
 div       = 750000
-base      = balance/div
-nextbet   = base
+biv       = balance/div
+nextbet   = biv
 bethigh   = false
 p         = 0
 l         = 0
@@ -27,8 +27,8 @@ if (currentprofit>0) then
 end 
 
 if win then
-    base    = balance/div
-    nextbet = base
+    biv    = balance/div
+    nextbet = biv
     chance  = math.random(3000,8000)/100
     wincount+=1
     p = 0
@@ -71,5 +71,7 @@ if win then
     losecount+=1
 end
 profitn=profit/(balance-profit)*100
-print("\nProfit: "..string.format("%.8f",profit).." "..currency.." ("..string.format("%.2f",profitn).."%)")
+print("\nProfit: "..string.format("%.8f",profit)
+.." "..string.upper(currency)..
+" ("..string.format("%.2f",profitn).."%)")
 end
