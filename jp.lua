@@ -1,4 +1,7 @@
-base = balance/1000000
+--
+gan = 3000000
+--int
+base = balance/gan
 nextbet = base
 chance = 10
 wincount = 0
@@ -6,13 +9,13 @@ losecount = 0
 target = balance*1.033
 bethigh = false
 w = 0
-roll=0
---
+roll = 0
+--dobet
 function dobet()
 roll+=1
---
+--target
 if balance > target then
-base = balance/1000000
+base = balance/gan
 nextbet = base
 chance = 10
 wincount = 0
@@ -20,15 +23,15 @@ losecount = 0
 target = balance*1.033
 bethigh = false
 w = 0
-roll=0
+roll = 0
 end
---
+--resetseed/bethigh
 if (w==16) then
     resetseed()
     bethigh = !bethigh
     w = 0
 end
---
+--win
 if win then
     w+=1
     wincount+=1
@@ -40,12 +43,12 @@ if win then
     losecount+=1
     nextbet = previousbet*1.3
 end
---
+--roll
 if roll>=50 then
 resetseed()
 end
 end
---
+--win streak 2
 if wincount==2 then
     wincount = 0
     nextbet = previousbet*1.2
