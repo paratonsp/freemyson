@@ -34,8 +34,8 @@ function dobet()
      bethigh = !bethigh
      resetseed()
      w = 0
-     print(..balance
-     .." "..string.upper(currency)
+     print(balance.." "..string.upper(currency))
+  end
   --
   if (nextbet>balance) then stop() end
   --
@@ -67,4 +67,5 @@ function dobet()
     end
   end
   done = false
+end
 end
