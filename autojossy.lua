@@ -10,7 +10,7 @@ base = balance*(betcalc/gan)
 curbet = base*3.7255
 nextbet = base
 w = 0
-tbet = 1000000
+tbet = 300000
 --
 --worststreak int
 maxstreakloses = 0
@@ -24,7 +24,17 @@ resetstats()
 function dobet()
     --detect worststreak
     if (bets>=0) and (bets<=tbet) then
-        worststreak() end 
+        worststreak() end
+    --maxlstreakloses
+    if (bets>=tbet) then
+        if (maxstreakloses<=7) then betcalc=7.3446286 end
+        if (maxstreakloses==8) then betcalc=1.9714477 end
+        if (maxstreakloses==9) then betcalc=0.5291766 end
+        if (maxstreakloses==10) then betcalc=0.14204170 end
+        if (maxstreakloses==11) then betcalc=0.03812690 end
+        if (maxstreakloses==12) then betcalc=0.01023403 end
+        if (maxstreakloses>=13) then stop(); print("NOT PROFITABLE"); end
+    end
     --balance stop
     if (nextbet>balance) then stop() end
     --base
@@ -44,15 +54,6 @@ function dobet()
     if(!first and !done) then
         if(stopnow) then stop() end
         if win then
-            if (bets>=tbet) then
-                if (maxstreakloses<=7) then betcalc=7.3446286 end
-                if (maxstreakloses==8) then betcalc=1.9714477 end
-                if (maxstreakloses==9) then betcalc=0.5291766 end
-                if (maxstreakloses==10) then betcalc=0.14204170 end
-                if (maxstreakloses==11) then betcalc=0.03812690 end
-                if (maxstreakloses==12) then betcalc=0.01023403 end
-                if (maxstreakloses>=13) then stop(); print("NOT PROFITABLE"); end
-            end
             chance = 25
             curbet = base*3.7255
             nextbet = base
