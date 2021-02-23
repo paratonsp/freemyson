@@ -10,7 +10,7 @@ base = balance*(betcalc/gan)
 curbet = base*3.7255
 nextbet = base
 w = 0
-tbet = 50000
+tbet = 1000000
 --
 --worststreak int
 maxstreakloses = 0
@@ -24,7 +24,7 @@ resetstats()
 function dobet()
     --detect worststreak
     if (bets>=0) and (bets<=tbet) then
-        worststreak(); print(maxstreakloses); end 
+        worststreak() end 
     --balance stop
     if (nextbet>balance) then stop() end
     --base
