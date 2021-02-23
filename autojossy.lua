@@ -33,7 +33,8 @@ function dobet()
         if (maxstreakloses==10) then betcalc=0.14204170 end
         if (maxstreakloses==11) then betcalc=0.03812690 end
         if (maxstreakloses==12) then betcalc=0.01023403 end
-        if (maxstreakloses>=13) then stop(); print("NOT PROFITABLE"); end
+        if (maxstreakloses>=13) then stop()
+            print("NOT PROFITABLE") end
     end
     --balance stop
     if (nextbet>balance) then stop() end
