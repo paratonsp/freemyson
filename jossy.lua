@@ -25,17 +25,9 @@ if (betcalc<0.00000001) then
 print("Please set betcalc then restart the script")
 stop() end
 --
-resetseed()
 resetstats()
 --
 function dobet()
---
-  if (w==5) then
-     bethigh = !bethigh
-     resetseed()
-     w = 0
-     print(balance.." "..string.upper(currency))
-  end
   --
   if (nextbet>balance) then stop() end
   --
@@ -46,6 +38,7 @@ function dobet()
     if !win then
       chance = 50
       nextbet = curbet
+      bethigh = !bethigh
       first = false
       done = true
     end
