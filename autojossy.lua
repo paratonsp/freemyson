@@ -54,7 +54,6 @@ function dobet()
                 if (maxstreakloses>=13) then stop(); print("NOT PROFITABLE"); end
             end
             chance = 25
-            base = balance*(betcalc/gan)
             curbet = base*3.7255
             nextbet = base
             w+=1
