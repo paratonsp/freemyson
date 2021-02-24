@@ -68,9 +68,6 @@ function dobet()
         end
     end
     done = false
-    print("LS : "..maxstreakloses
-    .." -- BC : "..betcalc..
-    " -- BT : "..bets)
 end
 --
 --------------------
