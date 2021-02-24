@@ -10,7 +10,7 @@ base = balance*(betcalc/gan)
 curbet = base*3.7255
 nextbet = base
 w = 0
-tbet = 300000
+tbet = 500000
 --
 --worststreak int
 maxstreakloses = 0
