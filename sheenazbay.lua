@@ -30,12 +30,12 @@ c14=1.98
 c15=2.75 
 c16=3.3 
 c17=8.25 
-resetseed()
+resetstats()
 --
 function dobet()
 if (wincount==25) then
-resetseed()
-wincount=0
+print("\nPLEASE RESETSEED\n")
+stop()
 end
 if nextbet>balance then stop() end
 basebet=balance/div
