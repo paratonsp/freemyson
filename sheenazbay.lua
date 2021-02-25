@@ -33,6 +33,12 @@ c17=8.25
 resetstats()
 --
 function dobet()
+--
+profitn = profit/(balance-profit)*100
+print("\nChance: "..lastBet.chance.." || Streak: "..currentstreak)
+print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
+print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
+--
 if (wincount==25) then
 print("\nPLEASE RESETSEED\n")
 stop()
