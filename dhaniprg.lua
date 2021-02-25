@@ -1,6 +1,6 @@
 maxbal=1000 --target
 --
-perxxx=1000 --increase for safety
+perxxx=100000
 --
 fixbase=0
 ratexxx=1
