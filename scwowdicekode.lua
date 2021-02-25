@@ -1,8 +1,6 @@
-resetseed()
-resetseed()
 resetstats()
 chance = math.random(25, 30)
-gan = 5000000
+gan = 10000
 base = balance/gan
 nextbet = base 
 bethigh = false
@@ -15,6 +13,12 @@ losecount = 0
 wincount = 0
 --
 function dobet()
+--
+profitn = profit/(balance-profit)*100
+print("\nNonce: "..lastBet.nonce)
+print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
+print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
+--
 if (lastBet.roll < chance) then
   low += 1
 end
@@ -22,7 +26,6 @@ if (lastBet.roll > (100 - chance)) then
   high += 1
 end 
 if (wincount==16) then 
- resetseed()
  bethigh=!bethigh
  wincount=0
 end
