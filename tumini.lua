@@ -1,4 +1,4 @@
-bb = balance/50000
+bb = balance/1000000
 iw = 1
 il = 1.6
 pr = 0
@@ -6,7 +6,6 @@ pr = 0
 nextbet = bb
 chance  = 19
 stopwin = false
-target = balance*1.05
 --
 resetstats()
 --
@@ -24,7 +23,6 @@ function dobet()
         nb = bb
     end
     if (currentstreak<-15) then stopwin = true end
-    if (profit>=target) then stopwin = true end
     nextbet = nb
     chance  = math.random(19,20)
     profitn = profit/(balance-profit)*100
