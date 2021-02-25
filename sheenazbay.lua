@@ -10,7 +10,6 @@ losecount=0
 betcount=0 
 counter=0 
 bethigh=false
-tbet=300000
 --
 chance=90
 c1=0.09
@@ -35,7 +34,8 @@ resetstats()
 function dobet()
 --
 profitn = profit/(balance-profit)*100
-print("\nChance: "..lastBet.chance.." || Streak: "..currentstreak)
+print("\nNonce: "..lastBet.nonce)
+print("Chance: "..lastBet.chance.." || Streak: "..currentstreak)
 print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
 print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
 --
@@ -48,8 +48,6 @@ basebet=balance/div
 a=basebet
 betcount+=1
 if win then
-    if (bets>=tbet) then stop();
-    print("\nFINISH\n") end
     two=0
     counter+=1
     wincount+=1
