@@ -23,4 +23,7 @@ function dobet()
     if (currentstreak<-15) then stopwin = true end
     nextbet = nb
     chance  = math.random(19,20)
+    profitn = profit/(balance-profit)*100
+    print("\nProfit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
+    print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
 end
