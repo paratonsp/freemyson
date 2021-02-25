@@ -10,6 +10,7 @@ losecount=0
 betcount=0 
 counter=0 
 bethigh=false
+tbet=300000
 --
 chance=90
 c1=0.09
@@ -40,7 +41,9 @@ if nextbet>balance then stop() end
 basebet=balance/div
 a=basebet
 betcount+=1
-if win then 
+if win then
+    if (bets>=tbet) then stop();
+    print("\nFINISH\n") end
     two=0
     counter+=1
     wincount+=1
