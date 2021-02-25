@@ -6,6 +6,9 @@ pr = 0
 nextbet = bb
 chance  = 19
 stopwin = false
+target = balance*1.05
+--
+resetstats()
 --
 function dobet()
     pf = profit
@@ -21,9 +24,11 @@ function dobet()
         nb = bb
     end
     if (currentstreak<-15) then stopwin = true end
+    if (profit>=target) then stopwin = true end
     nextbet = nb
     chance  = math.random(19,20)
     profitn = profit/(balance-profit)*100
-    print("\nProfit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
+    print("\nNonce: "..lastBet.nonce)
+    print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
     print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
 end
