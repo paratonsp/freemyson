@@ -21,28 +21,17 @@ end
 if (lastBet.roll > (100 - chance)) then
   high += 1
 end 
-if wincount==16 then 
+if (wincount==16) then 
  resetseed()
  bethigh=!bethigh
  wincount=0
 end
 --
 if balance>target then
-resetseed()
-resetseed()
-resetstats()
-chance = math.random(25, 30)
-gan = 100000
-base = balance/gan
-nextbet = base 
-bethigh = false
-rollcount = 2000*20000
-target = balance*1.05
-bethigh = true
-low = 0
-high = 0
-losecount = 0
-wincount = 0
+print("\nTARGET REACHED")
+print("Balance : "..balance)
+print("Profit : "..profit.."\n")
+stop()
 end
 --
 chance = math.random(40,50)
