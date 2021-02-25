@@ -1,8 +1,9 @@
-maxbal=10000 --target
+maxbal=1000 --target
+--
+perxxx=1000 --increase for safety
 --
 fixbase=0
 ratexxx=1
-perxxx=1000 --increase for safety
 decxxx=2.5
 minbetxxx=0.00000001
 mybasebet = balance/perxxx
