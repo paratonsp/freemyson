@@ -1,6 +1,6 @@
 maxbal=1000 --target
 --
-perxxx=100000
+perxxx=25000
 --
 fixbase=0
 ratexxx=1
