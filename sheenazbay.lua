@@ -1,6 +1,4 @@
 --
-username="username"
---
 div=600000
 basebet=balance/div
 a=basebet
@@ -31,25 +29,23 @@ c14=1.98
 c15=2.75 
 c16=3.3 
 c17=8.25 
-resetstats()
-resetseed();
-       
+resetseed()
+--
 function dobet()
-if (wincount==20) then
+if (wincount==25) then
 resetseed()
 wincount=0
 end
 if nextbet>balance then stop() end
+basebet=balance/div
+a=basebet
 betcount+=1
 if win then 
     two=0
     counter+=1
     wincount+=1
-    basebet=balance/div
-    a=basebet
     nextbet=basebet
-    losecount=0
-print("Profit : "..profit)    
+    losecount=0  
 if (wincount==1) then
     trigger=1
 end
@@ -486,11 +482,5 @@ if !win then
         end
     end
 end
-profitn = profit/(balance-profit)*100
-print("\nUser: "..username)
-print("Balance: "..string.format("%.2f",balance).." "..currency)
-print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
-print("Nonce: "..lastBet.nonce.." | Wins: "..wins)
-print("Chance: "..lastBet.Chance.." | Streak: "..currentstreak)
 end
 end
