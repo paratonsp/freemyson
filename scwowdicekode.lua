@@ -2,7 +2,7 @@ resetseed()
 resetseed()
 resetstats()
 chance = math.random(25, 30)
-gan = 1000000
+gan = 5000000
 base = balance/gan
 nextbet = base 
 bethigh = false
@@ -28,21 +28,7 @@ if (wincount==16) then
 end
 --
 if balance>target then
-resetseed()
-resetseed()
-resetstats()
-chance = math.random(25, 30)
-gan = 1000000
-base = balance/gan
-nextbet = base 
-bethigh = false
-rollcount = 2000*20000
-target = balance*1.05
-bethigh = true
-low = 0
-high = 0
-losecount = 0
-wincount = 0
+stop()
 end
 --
 chance = math.random(40,50)
