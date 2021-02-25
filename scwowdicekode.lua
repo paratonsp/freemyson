@@ -2,7 +2,7 @@ resetseed()
 resetseed()
 resetstats()
 chance = math.random(25, 30)
-gan = 100000
+gan = 200000
 base = balance/gan
 nextbet = base 
 bethigh = false
