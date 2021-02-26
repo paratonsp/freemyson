@@ -1,5 +1,5 @@
 --gan
-gan = 100000000
+gan = 1000000
 --int
 base = balance/gan
 nextbet = base
@@ -8,22 +8,20 @@ wincount = 0
 losecount = 0
 bethigh = false
 w = 0
+target = balance*1.033
 --reset
-resetseed()
 resetstats()
+
 --dobet
 function dobet()
 
---roll+
-roll+=1
+--target
+if (balance>=target) then stop() end
 
 --resetseed/bethigh
 if (w==5) then
-    resetseed()
     bethigh = !bethigh
     w = 0
-    print(..balance
-    .." "..string.upper(currency)
 end
 
 --win
@@ -38,18 +36,10 @@ if win then
     losecount+=1
     nextbet = previousbet*1.3
 end
-
---win streak 2
-if (wincount==2) then
-    wincount = 0
-    nextbet = previousbet*1.2
-    chance = 5
-end
-
---losecount>10
-if (losecount>=10) then
-    chance = 15.9
-end
+    profitn = profit/(balance-profit)*100
+    print("\nNonce: "..lastBet.nonce)
+    print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
+    print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
 end
 end
 end
