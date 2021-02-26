@@ -57,6 +57,8 @@ if win then
     lol+=1
     counter+=1
     wincount+=1
+    basebet=balance/div
+    a=basebet
     nextbet=basebet
     losecount=0  
 --
