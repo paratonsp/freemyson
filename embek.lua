@@ -9,7 +9,7 @@ wincount  = 0
 losecount = 0
 betcount  = 0 
 counter   = 0 
-bethigh   = true
+bethigh   = false
 --
 resetstats()
 chance = 90
