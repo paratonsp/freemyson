@@ -3,6 +3,7 @@ basebet   = balance/div
 a         = basebet
 nextbet   = basebet
 two       = 0
+lol       = 0
 trigger   = 0
 wincount  = 0
 losecount = 0
@@ -11,7 +12,6 @@ counter   = 0
 bethigh   = false
 --
 resetstats()
-resetseed()
 chance = 90
 c1     = 0.09        
 c2     = 0.19      
@@ -42,17 +42,22 @@ c25    = 2.49
 function dobet()
 --
 if (wincount==25) then
-    resetseed()
-    wincount = 0
+profitn = profit/(balance-profit)*100
+print("\nPLEASE CHANGE CLIENTSEED")
+print("Profit: "..string.format("%.8f",profit)
+.." ("..string.format("%.2f",profitn).."%)\n")
+stop()
 end
+--
+if nextbet>balance then stop() end
+--
 betcount+=1
 if win then
-    basebet=balance/div
-    a=basebet
     two=0
+    lol+=1
     counter+=1
     wincount+=1
-    nextbet=balance/div
+    nextbet=basebet
     losecount=0  
 --
 if (wincount==1) then
@@ -686,12 +691,14 @@ if !win then
             nextbet = previousbet*1.025
         end
     end
-    profitn = profit/(balance-profit)*100
-    print("\nbalance: "..string.format("%.5f",balance))
-    print("profit: "..string.format("%.5f",profit).." ("..string.format("%.2f",profitn).."%)")
-    print("bets: "..bets.." || streak: "..currentstreak.."\n")
 end
-if nextbet>balance then stop() end
+--
+if (lol==1) then
+if (bethigh==true) then
+    bethigh=false
+else
+    bethigh=true end
+lol = 0
 end
 end
 end
