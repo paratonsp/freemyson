@@ -38,7 +38,6 @@ function dobet()
     if !win then
       chance = 50
       nextbet = curbet
-      bethigh = !bethigh
       first = false
       done = true
     end
