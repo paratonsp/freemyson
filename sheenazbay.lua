@@ -40,16 +40,17 @@ print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profi
 print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
 --
 if (wincount==25) then
-bethigh=!bethigh
-wincount=0
+print("\nPLEASE RESETSEED\n")
+stop()
 end
+--
 if nextbet>balance then stop() end
+--
 basebet=balance/div
 a=basebet
 betcount+=1
+--
 if win then
-    if (lastBet.nonce>=100000) then
-    stop () end
     two=0
     counter+=1
     wincount+=1
