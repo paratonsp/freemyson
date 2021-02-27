@@ -16,7 +16,10 @@ resetstats()
 function dobet()
 
 if (wincount==5) then
-    resetseed()
+    profitn=profit/(balance-profit)*100
+    print("\nProfit: "..string.format("%.8f",profit)
+    .." "..string.upper(currency)..
+    " ("..string.format("%.2f",profitn).."%)\n")
     bethigh=!bethigh
     wincount = 0
 end
@@ -28,7 +31,7 @@ if (currentprofit>0) then
 end 
 
 if win then
-    biv    = balance/div
+    biv     = balance/div
     nextbet = biv
     chance  = math.random(3000,8000)/100
     wincount+=1
@@ -71,8 +74,4 @@ if win then
     end
     losecount+=1
 end
-profitn=profit/(balance-profit)*100
-print("\nProfit: "..string.format("%.8f",profit)
-.." "..string.upper(currency)..
-" ("..string.format("%.2f",profitn).."%)")
 end
