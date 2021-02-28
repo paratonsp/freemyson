@@ -9,11 +9,14 @@ tnf={true,false,true,false,true}
 w=0
 --
 resetstats()
+resetseed()
 --
 function dobet()
 --
 if (w==10) then
     wait(60)
+    resetstats()
+    resetseed()
     w=0
 end
 
