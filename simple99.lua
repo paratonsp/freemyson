@@ -1,27 +1,29 @@
-gan=20
+--9.9.lua
+gan=6.03
 --
 div=100000*gan
 base=balance/div
 nextbet=base
-chance=10.00
-multi=1.125
-bethigh=true
+chance=9.9
 --
 resetstats()
 --
 function dobet()
 --
+tt=10000
+chance=math.random(9.9*tt,10*tt)/tt
+--
 if win then
     base=balance/div
     nextbet=base
-    chance=10.00
-    multi=1.125
     bethigh=!bethigh
 else
-    pc=chance
-    pm=multi
-    chance=pc+0.10
-    multi=pm+0.00125
-    nextbet=previousbet*multi 
+    if (currentstreak<-5) then
+        nextbet=previousbet*1.125
+    end
+    --
+    if (currentstreak<-95) then
+        nextbet=previousbet
+    end
 end
 end
