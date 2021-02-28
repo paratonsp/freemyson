@@ -39,14 +39,20 @@ c23    = 2.29
 c24    = 2.39
 c25    = 2.49
 --
+function wait(second)
+clock=os.clock() 
+while os.clock()-clock<=second do
+end
+end
+--
 function dobet()
 --
 if (wincount==25) then
 profitn = profit/(balance-profit)*100
-print("\nPLEASE CHANGE CLIENTSEED")
+print("\nISHOMA 5 MENIT")
 print("Profit: "..string.format("%.8f",profit)
 .." ("..string.format("%.2f",profitn).."%)\n")
-stop()
+wait(300)
 end
 --
 if nextbet>balance then stop() end
