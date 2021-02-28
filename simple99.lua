@@ -1,24 +1,27 @@
-gan=2 --ls90
+gan=20
 --
 div=100000*gan
 base=balance/div
 nextbet=base
-preroll=5
-chance=9.9
-multiplier=1.125
+chance=10.00
+multi=1.125
+bethigh=true
 --
 resetstats()
 --
 function dobet()
 --
-chance=math.random(9.9*10000,10*10000)/10000
---
 if win then
     base=balance/div
     nextbet=base
+    chance=10.00
+    multi=1.125
+    bethigh=!bethigh
 else
-    if (currentstreak<-preroll) then
-        nextbet=previousbet*multiplier
-    end
+    pc=chance
+    pm=multi
+    chance=pc+0.10
+    multi=pm+0.00125
+    nextbet=previousbet*multi 
 end
 end
