@@ -14,6 +14,7 @@ function dobet()
 chance = math.random(cl*100.0, cr*100.0)/100.0
 --
 if win then
+    base = balance/div
     nextbet = base
 else
     nextbet = previousbet*multi
