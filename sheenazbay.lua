@@ -1,61 +1,56 @@
+chance = 90
+c1 = 0.09             -->1100X payout
+c2 = 0.1              -->990X payout
+c3 = 0.15             -->660X payout
+c4 = 0.17             -->582X payout
+c5 = 0.2              -->495X payout
+c6 = 0.27             -->366X payout
+c7 = 0.33             -->300X payout
+c8 = 0.49             -->202X payout
+c9 = 0.9              -->110X payout
+c10 = 0.99            -->100X payout
+c11 = 1               -->99X payout
+c12 = 1.5             -->66X payout
+c13 = 1.65            -->60X payout
+c14 = 1.98            -->50X payout
+c15 = 2.75            -->36X payout
+c16 = 3.3             -->30X payout
+c17 = 8.25            -->12X payout
 --
-div=600000
-basebet=balance/div
-a=basebet
-nextbet=basebet
-two=0
-trigger=0
-wincount=0
-losecount=0
-betcount=0 
-counter=0 
-bethigh=false
---
-chance=90
-c1=0.09
-c2=0.1  
-c3=0.15  
-c4=0.17  
-c5=0.2  
-c6=0.27  
-c7=0.33  
-c8=0.49  
-c9=0.9  
-c10=0.99
-c11=1 
-c12=1.5 
-c13=1.65 
-c14=1.98 
-c15=2.75 
-c16=3.3 
-c17=8.25 
-resetstats()
---
+two       = 0
+bank      = balance*5
+basebet   = balance/6000000
+a	  = basebet
+nextbet   = basebet
+lol       = 0
+trigger   = 0
+wincount  = 0
+losecount = 0
+betcount  = 0 
+counter   = 0 
+bethigh   = false
+resetseed();
+--      
 function dobet()
---
-profitn = profit/(balance-profit)*100
-print("\nNonce: "..lastBet.nonce)
-print("Chance: "..lastBet.chance.." || Streak: "..currentstreak)
-print("Profit: "..string.format("%.2f",profit).." ("..string.format("%.2f",profitn).."%)")
-print("Balance: "..string.format("%.2f",balance).." "..string.upper(currency))
---
-if (wincount==25) then
-print("\nPLEASE RESETSEED\n")
-stop()
+-- 
+if (wincount==50) then
+resetseed();
+wincount = 0
 end
 --
-if nextbet>balance then stop() end
+if balance>bank then
+    stop()
+end 
 --
-basebet=balance/div
-a=basebet
 betcount+=1
---
-if win then
-    two=0
+if win then 
+    two    = 0
+    lol += 1
     counter+=1
     wincount+=1
     nextbet=basebet
-    losecount=0  
+    losecount=0
+    
 if (wincount==1) then
     trigger=1
 end
@@ -112,11 +107,13 @@ if (wincount==18) then
 end
 if (wincount>17) then
     trigger=17
-end 
+end
+  
     if trigger==1 then
         chance=c1
         lostchance=1
     end
+
     if trigger==2 then
         chance=c2
         lostchance=2
@@ -125,6 +122,7 @@ end
         chance=c3
         lostchance=3
     end
+
     if trigger==4 then
         chance=c4
         lostchance=4
@@ -142,6 +140,7 @@ end
         chance=c7
         lostchance=7
     end
+
     if trigger==8 then
         chance=c8
         lostchance=8
@@ -150,6 +149,7 @@ end
         chance=c9
         lostchance=9
     end
+
     if trigger==10 then
         chance=c10
         lostchance=10
@@ -158,6 +158,7 @@ end
         chance=c11
         lostchance=11
     end
+
     if trigger==12 then
         chance=c12
         lostchance=12
@@ -175,17 +176,20 @@ end
         chance=c15
         lostchance=15
     end
+
     if trigger==16 then
         chance=c16
         lostchance=16
-    end  
+    end
+    
     if trigger==17 then
         chance=c17
         lostchance=17
     end
     end
 if !win then 
-    two += 1   
+    two += 1
+    
     if lostchance==1 then
         if two == 0 then  
             chance  = c1
@@ -204,6 +208,7 @@ if !win then
             nextbet = previousbet*1.001
         end
     end
+
     if lostchance==2 then
         if two == 0 then  
             chance  = c2
@@ -241,6 +246,7 @@ if !win then
             nextbet = previousbet*1.00175
         end
     end
+
     if lostchance==4 then
         if two == 0 then  
             chance  = c4
@@ -278,6 +284,7 @@ if !win then
             nextbet = previousbet*1.0025
         end
     end
+
     if lostchance==6 then
         if two == 0 then  
             chance  = c6
@@ -315,6 +322,7 @@ if !win then
             nextbet = previousbet*1.0038
         end
     end
+
     if lostchance==8 then
         if two == 0 then  
             chance  = c8
@@ -333,6 +341,7 @@ if !win then
             nextbet = previousbet*1.0055
         end
     end
+
     if lostchance==9 then
         if two == 0 then  
             chance  = c9
@@ -351,6 +360,7 @@ if !win then
             nextbet = previousbet*1.01
         end
     end
+
     if lostchance==10 then
         if two == 0 then  
             chance  = c10
@@ -369,6 +379,7 @@ if !win then
             nextbet = previousbet*1.011
         end
     end
+
     if lostchance==11 then
         if two == 0 then  
             chance  = c11
@@ -387,6 +398,7 @@ if !win then
             nextbet = previousbet*1.011
         end
     end
+
     if lostchance==12 then
         if two == 0 then  
             chance  = c12
@@ -405,6 +417,7 @@ if !win then
             nextbet = previousbet*1.0175
         end
     end
+
     if lostchance==13 then
         if two == 0 then  
             chance  = c13
@@ -423,6 +436,7 @@ if !win then
             nextbet = previousbet*1.022
         end
     end
+
     if lostchance==14 then
         if two == 0 then  
             chance  = c14
@@ -441,6 +455,7 @@ if !win then
             nextbet = previousbet*1.025
         end
     end
+
     if lostchance==15 then
         if two == 0 then  
             chance  = c15
@@ -459,6 +474,7 @@ if !win then
             nextbet = previousbet*1.032
         end
     end
+
     if lostchance==16 then
         if two == 0 then  
             chance  = c16
@@ -477,6 +493,7 @@ if !win then
             nextbet = previousbet*1.0375
         end
     end
+
     if lostchance==17 then
         if two == 0 then  
             chance  = c17
@@ -491,6 +508,11 @@ if !win then
             nextbet = previousbet*1.095
         end
     end
+end
+
+if (lol==1) then
+if (bethigh==true) then bethigh=false else bethigh=true end
+lol = 0
 end
 end
 end
