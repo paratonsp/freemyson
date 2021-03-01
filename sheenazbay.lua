@@ -1,47 +1,49 @@
-chance = 90
-c1 = 0.09             -->1100X payout
-c2 = 0.1              -->990X payout
-c3 = 0.15             -->660X payout
-c4 = 0.17             -->582X payout
-c5 = 0.2              -->495X payout
-c6 = 0.27             -->366X payout
-c7 = 0.33             -->300X payout
-c8 = 0.49             -->202X payout
-c9 = 0.9              -->110X payout
-c10 = 0.99            -->100X payout
-c11 = 1               -->99X payout
-c12 = 1.5             -->66X payout
-c13 = 1.65            -->60X payout
-c14 = 1.98            -->50X payout
-c15 = 2.75            -->36X payout
-c16 = 3.3             -->30X payout
-c17 = 8.25            -->12X payout
 --
-two       = 0
-bank      = balance*5
-basebet   = balance/6000000
-a	  = basebet
-nextbet   = basebet
-lol       = 0
-trigger   = 0
-wincount  = 0
+chance = 90
+c1 = 0.09
+c2 = 0.1
+c3 = 0.15
+c4 = 0.17
+c5 = 0.2
+c6 = 0.27
+c7 = 0.33
+c8 = 0.49
+c9 = 0.9
+c10 = 0.99
+c11 = 1
+c12 = 1.5
+c13 = 1.65
+c14 = 1.98
+c15 = 2.75
+c16 = 3.3
+c17 = 8.25
+--
+two = 0
+bank = balance*5
+basebet = balance/600000
+a = basebet
+nextbet = basebet
+lol = 0
+trigger = 0
+wincount = 1
 losecount = 0
-betcount  = 0 
-counter   = 0 
-bethigh   = false
+betcount = 0 
+counter = 0 
+bethigh = false
 resetseed();
---      
-function dobet()
--- 
+resetstats();
+--
+function dobet()  
+--------------------
+if balance>bank then
+stop()
+end 
+-----------
 if (wincount==50) then
 resetseed();
-wincount = 0
+wincount = 1
 end
---
-if balance>bank then
-    stop()
-end 
---
+-----------
 betcount+=1
 if win then 
     two    = 0
@@ -50,7 +52,7 @@ if win then
     wincount+=1
     nextbet=basebet
     losecount=0
-    
+--   
 if (wincount==1) then
     trigger=1
 end
@@ -509,10 +511,11 @@ if !win then
         end
     end
 end
-
+--
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
 lol = 0
 end
 end
 end
+--
