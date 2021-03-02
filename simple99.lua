@@ -1,5 +1,5 @@
 --9.9.lua
-gan=6.03
+gan=2
 --
 div=100000*gan
 base=balance/div
@@ -21,9 +21,6 @@ else
     if (currentstreak<-5) then
         nextbet=previousbet*1.125
     end
-    --
-    if (currentstreak<-95) then
-        nextbet=previousbet
-    end
 end
+if nextbet>(base*100) then sleep(1000) end
 end
