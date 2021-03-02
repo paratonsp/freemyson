@@ -10,7 +10,7 @@ resetstats()
 --
 function dobet()
 --
-tt=10000
+tt=100000000
 chance=math.random(9.9*tt,10*tt)/tt
 --
 if win then
