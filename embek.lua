@@ -693,7 +693,7 @@ if !win then
     end
 end
 --
-if nextbet>(a*1000) then sleep(1000) end
+if nextbet>(a*100) then sleep(1000) end
 --
 if (lol==1) then
 if (bethigh==true) then
