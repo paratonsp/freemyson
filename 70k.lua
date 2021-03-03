@@ -12,7 +12,6 @@ losecount = 0
 betcount  = 0
 counter   = 0
 bethigh   = false
-maxbets   = 200000
 ------------------
 resetstats()
 resetseed()
@@ -45,25 +44,20 @@ c25    = 2.49
 ------------------
 function dobet()
 --
-basebet = balance/div
-a = basebet
---
 if (wincount==25) then
     resetseed()
     wincount = 0
 end
 --
-if nextbet > (a*100) then sleep(1000) end
---
 betcount+=1
 if win then
-    if (bets>maxbets) then stop() end
-    two = 0
-    lol+= 1
-    counter+= 1
-    wincount+= 1
-    nextbet = balance/div
-    losecount=0   
+    two=0
+    lol+=1
+    counter+=1
+    wincount+=1
+    nextbet=balance/div
+    losecount=0
+--
 if (wincount==1) then
     trigger=1
 end
