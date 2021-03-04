@@ -49,9 +49,6 @@ if (wincount==25) then
     wincount=0
 end
 --
-if nextbet > (a*10) then
-sleep(1200) end
---
 betcount+=1
 if win then
     two=0
@@ -699,6 +696,9 @@ end
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
 lol = 0
+--
+if nextbet > (a*10) then
+sleep(1200) end
 --
 end
 end
