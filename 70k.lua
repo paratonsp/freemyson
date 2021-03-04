@@ -11,7 +11,7 @@ wincount  = 0
 losecount = 0
 betcount  = 0
 counter   = 0
-bethigh   = false
+bethigh   = true
 ------------------
 resetstats()
 resetseed()
@@ -46,8 +46,11 @@ function dobet()
 --
 if (wincount==25) then
     resetseed()
-    wincount = 0
+    wincount=0
 end
+--
+if nextbet > (a*10) then
+sleep(1200) end
 --
 betcount+=1
 if win then
@@ -55,6 +58,8 @@ if win then
     lol+=1
     counter+=1
     wincount+=1
+    basebet=balance/div
+    a=basebet
     nextbet=balance/div
     losecount=0
 --
