@@ -49,6 +49,9 @@ if (wincount==25) then
     wincount=0
 end
 --
+if nextbet>(a*10) then sleep(1200) end
+--
+--
 betcount+=1
 if win then
     two=0
@@ -57,7 +60,7 @@ if win then
     wincount+=1
     basebet=balance/div
     a=basebet
-    nextbet=balance/div
+    nextbet=basebet
     losecount=0
 --
 if (wincount==1) then
@@ -250,11 +253,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.002
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.00125
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.001
         end
@@ -268,11 +271,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.004
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.00325
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.002
         end
@@ -286,11 +289,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.006
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.00525
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.003
         end
@@ -304,11 +307,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.008
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.00725
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.004
         end
@@ -322,11 +325,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.01
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.00925
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.005
         end
@@ -340,11 +343,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.012
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.01125
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.006
         end
@@ -358,11 +361,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.014
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.01325
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.007
         end
@@ -376,11 +379,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.016
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.01525
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.008
         end
@@ -394,11 +397,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.018
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.01725
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.009
         end
@@ -412,11 +415,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.02
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.01925
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.01
         end
@@ -430,11 +433,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.022
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.02125
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.011
         end
@@ -448,11 +451,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.024
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.02325
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.012
         end
@@ -466,11 +469,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.026
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.02525
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.013
         end
@@ -484,11 +487,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.028
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.02725
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.014
         end
@@ -502,11 +505,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.03
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.02925
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.015
         end
@@ -520,11 +523,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.032
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.03125
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.016
         end
@@ -538,11 +541,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.034
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.03325
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.017
         end
@@ -556,11 +559,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.036
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.03525
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.018
         end
@@ -574,11 +577,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.038
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.03725
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.019
         end
@@ -592,11 +595,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.040
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.03925
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.020
         end
@@ -610,11 +613,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.042
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.04125
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.021
         end
@@ -628,11 +631,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.044
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.04325
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.022
         end
@@ -646,11 +649,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.046
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.04525
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.023
         end
@@ -664,11 +667,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.048
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.04725
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.024
         end
@@ -682,11 +685,11 @@ if !win then
             chance  = previouschance
             nextbet = previousbet*1.050
         end
-        if !win and nextbet > (a*10) then
+        if !win and nextbet > (a*5) then
             chance  = previouschance
             nextbet = previousbet*1.04925
         end
-        if !win and nextbet > (a*100) then
+        if !win and nextbet > (a*10) then
             chance  = previouschance
             nextbet = previousbet*1.025
         end
@@ -696,9 +699,6 @@ end
 if (lol==1) then
 if (bethigh==true) then bethigh=false else bethigh=true end
 lol = 0
---
-if nextbet > (a*10) then
-sleep(1200) end
 --
 end
 end
