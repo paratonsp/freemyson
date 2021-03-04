@@ -695,11 +695,6 @@ if !win then
         end
     end
 end
---
-if (lol==1) then
-if (bethigh==true) then bethigh=false else bethigh=true end
-lol = 0
---
 end
 end
 end
