@@ -49,15 +49,14 @@ if (wincount==25) then
     wincount=0
 end
 --
-basebet=balance/div
-a=basebet
---
 betcount+=1
 if win then
     two=0
     lol+=1
     counter+=1
     wincount+=1
+    basebet=balance/div
+    a=basebet
     nextbet=balance/div
     losecount=0
 --
