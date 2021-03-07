@@ -51,7 +51,6 @@ end
 --
 if nextbet>(a*10) then sleep(1200) end
 --
---
 betcount+=1
 if win then
     two=0
