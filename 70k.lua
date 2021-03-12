@@ -11,36 +11,36 @@ wincount  = 0
 losecount = 0
 betcount  = 0
 counter   = 0
-bethigh   = true
+bethigh   = false
 ------------------
 resetstats()
 resetseed()
 chance = 90
-c1     = 0.09       
-c2     = 0.19     
-c3     = 0.29      
-c4     = 0.39      
-c5     = 0.49     
-c6     = 0.59      
-c7     = 0.69      
-c8     = 0.79      
-c9     = 0.89     
-c10    = 0.99      
-c11    = 1.09
-c12    = 1.19    
-c13    = 1.29     
-c14    = 1.39     
-c15    = 1.49     
-c16    = 1.59    
-c17    = 1.69
-c18    = 1.79
-c19    = 1.89
-c20    = 1.99
-c21    = 2.09
-c22    = 2.19
-c23    = 2.29
-c24    = 2.39
-c25    = 2.49
+c1     = 0.09       --PO X 1100
+c2     = 0.19       --PO X 521
+c3     = 0.29       --PO X 341
+c4     = 0.39       --PO X 253
+c5     = 0.49       --PO X 202
+c6     = 0.59       --PO X 167
+c7     = 0.69       --PO X 143
+c8     = 0.79       --PO X 125
+c9     = 0.89       --PO X 111
+c10    = 0.99       --PO X 100
+c11    = 1.09       --PO X 90
+c12    = 1.19       --PO X 83
+c13    = 1.29       --PO X 76
+c14    = 1.39       --PO X 71
+c15    = 1.49       --PO X 66
+c16    = 1.59       --PO X 62
+c17    = 1.69       --PO X 58
+c18    = 1.79       --PO X 55
+c19    = 1.89       --PO X 52
+c20    = 1.99       --PO X 49
+c21    = 2.09       --PO X 47
+c22    = 2.19       --PO X 45
+c23    = 2.29       --PO X 43
+c24    = 2.39       --PO X 41
+c25    = 2.49       --PO X 39
 ------------------
 function dobet()
 --
@@ -49,16 +49,12 @@ if (wincount==25) then
     wincount=0
 end
 --
-if nextbet>(a*10) then sleep(1200) end
---
 betcount+=1
 if win then
     two=0
     lol+=1
     counter+=1
     wincount+=1
-    basebet=balance/div
-    a=basebet
     nextbet=basebet
     losecount=0
 --
