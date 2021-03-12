@@ -46,6 +46,8 @@ function dobet()
 --
 if (wincount==25) then
     resetseed()
+    basebet = balance/div
+    a = basebet
     wincount=0
 end
 --
