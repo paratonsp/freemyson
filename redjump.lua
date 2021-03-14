@@ -15,9 +15,10 @@ function dobet()
 --
 if win then
     nextbet = 0.00000001
+    bethigh = !bethigh
 end
 --
-if ! win then
+if !win then
     nextbet = 0.00000001
     if (currentstreak==-5) then
         nextbet = balance/div
@@ -26,6 +27,11 @@ if ! win then
     if (currentstreak<-5) then
         nextbet = previousbet*2
     end
+end
+--
+if (wins==20000) then
+    resetseed()
+    resetstats()
 end
 --
 end
