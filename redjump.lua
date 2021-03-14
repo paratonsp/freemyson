@@ -10,6 +10,7 @@ chance = 49.5
 nextbet = 0.00000001
 bethigh = false
 --
+resetseed()
 resetstats()
 function dobet()
 --
