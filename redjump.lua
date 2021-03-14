@@ -1,4 +1,10 @@
-div = 400 --200/400/800/2000
+--div option--
+--200  --crazy
+--400  --risk
+--800  --safe
+--2000 --very-safe
+------------
+div = 400
 --
 chance = 49.5
 nextbet = 0.00000001
