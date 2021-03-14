@@ -46,8 +46,6 @@ function dobet()
 --
 if (wincount==25) then
     resetseed()
-    basebet = balance/div
-    a = basebet
     wincount=0
 end
 --
@@ -57,6 +55,8 @@ if win then
     lol+=1
     counter+=1
     wincount+=1
+    basebet = balance/div
+    a = basebet
     nextbet=basebet
     losecount=0
 --
