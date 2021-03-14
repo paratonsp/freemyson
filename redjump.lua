@@ -15,7 +15,6 @@ function dobet()
 --
 if win then
     nextbet = 0.00000001
-    bethigh = !bethigh
 end
 --
 if ! win then
