@@ -35,7 +35,8 @@ function dobet()
                 c=r(79,90)
             end
         else
-            c=r(79,80)n=d*e[2]
+            c=r(79,80)
+            n=d*e[2]
         end
         --
         if n>y[1] and y[4] then
